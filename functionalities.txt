@@ -1,0 +1,8 @@
+The functionalities that are to be added/updated according to my observation are:
+
+1. The hyperlinks under the images/icons of the Virtual labs and IIIT Hyderabad are to added.
+2. There should be a naviagation bar present for every page.
+3. After entering an improper order of words. It shows WRONG ANSWER!!!. Then under that text, there is a button "GET CORRECT SENTENCE", after clicking it and getting the answers and then 
+after clicking "HIDE THE CORRECT SENTENCE", it is again showing "GET ANSWERS", this is no need, this has to be removed.
+4. After getting the RIGHT ANSWER!!!, there is no requirement for re-arranging the words button.
+5. "CORRECT ANSWER!!!" would be better than "RIGHT ANSWER!!!".
