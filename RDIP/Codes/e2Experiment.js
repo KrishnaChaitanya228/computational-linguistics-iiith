@@ -50,7 +50,12 @@ if (selection.value === "english") {
     let englishRandom = englishArray[Math.floor(Math.random() * englishArray.length)]
     document.getElementById("for1").innerHTML = "(select the buttons in proper order)"
     document.getElementById("for2").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
-    document.getElementById("forval").innerHTML =englishRandom[Math.floor(Math.random())]
+    var changeWords = englishRandom[Math.floor(Math.random())]
+    document.getElementById("forval").innerHTML = changeWords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
+    var words = $("p").first().text().split(/\s+/);
+    var text = words.join("</button> <button>");
+    $("p").first().html("<button>" + text + "</button>");
+    $("button").css({"font-size":"20px","padding":"8px","margin-right":"6px"});
     }
 else if (selection.value === "hindi") {
     let firstHindiSentence = ['राम और श्याम बाजार गयें',
@@ -111,7 +116,12 @@ else if (selection.value === "hindi") {
     let hindiRandom = hindiArray[Math.floor(Math.random() * hindiArray.length)]
     document.getElementById("for1").innerHTML = "(select the buttons in proper order)"
     document.getElementById("for2").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
-    document.getElementById("forval").innerHTML =  hindiRandom[Math.floor(Math.random())]
+    var randomizeWords = hindiRandom[Math.floor(Math.random())]
+    document.getElementById("forval").innerHTML = randomizeWords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
+    var words = $("p").first().text().split(/\s+/);
+    var text = words.join("</button> <button>");
+    $("p").first().html("<button>" + text + "</button>");
+    $("button").css({"font-size":"20px","padding":"8px","margin-right":"6px"});
 } else {
     document.getElementById("for1").innerHTML = ""
     document.getElementById("for").innerHTML = ""
