@@ -1,4 +1,25 @@
 let selection = document.getElementById("language");
+$("#hideSentence").hide()
+function randomizeTheValue(data) {
+    var mix = data.split(" ");
+    var i = mix.length, temp, index;
+    while (0 !== i) {
+        index = Math.floor(Math.random() * i);
+        i --;
+        temp = mix[i];
+        mix[i] = mix[index];
+        mix[index] = temp;
+    }
+    return mix;
+}
+var valueToBeDisplay = "";
+function buttonDisplay(id, value) {
+    document.getElementById("for3").innerHTML = "Formed Sentence (after selecting words):";
+    valueToBeDisplay += value + " ";
+    document.getElementById("for4").innerHTML = valueToBeDisplay;
+    $("#hideSentence").show()
+    document.getElementById(id).style.display = "none";
+}
 run = function () {
 if (selection.value === "english") {
     let firstEnglishSentence = ['John ate an apple before afternoon',
@@ -47,15 +68,24 @@ if (selection.value === "english") {
        ];
     let englishArray = [firstEnglishSentence,secondEnglishSentence,thirdEnglishSentence,fourthEnglishSentence,
         fifthEnglishSentence,sixthEnglishSentence,seventhEnglishSentence,eightEnglishSentence,ninethEnglishSentence,tenthEnglishSentence];
-    let englishRandom = englishArray[Math.floor(Math.random() * englishArray.length)]
+    
     document.getElementById("for1").innerHTML = "(select the buttons in proper order)"
     document.getElementById("for2").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
-    var changeWords = englishRandom[Math.floor(Math.random())]
-    document.getElementById("forval").innerHTML = changeWords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
-    var words = $("p").first().text().split(/\s+/);
-    var text = words.join("</button> <button>");
-    $("p").first().html("<button>" + text + "</button>");
-    $("button").css({"font-size":"20px","padding":"8px","margin-right":"6px"});
+    var changeWords = Math.floor(Math.random()*englishArray.length)
+    document.getElementById("for3").innerHTML = ""
+    document.getElementById("for4").innerHTML = ""
+    $("#hideSentence").hide()
+    var changeWords = Math.floor(Math.random() * englishArray.length);
+    var gettingValue = englishArray[changeWords][0];
+    var k = randomizeTheValue(gettingValue);
+    var m = "";
+    var n = "";
+    for (i = 0; i <= k.length - 1; i++) {
+        val = k[i];
+        m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+        n += m;
+    }
+    document.getElementById("forval").innerHTML = n 
     }
 else if (selection.value === "hindi") {
     let firstHindiSentence = ['राम और श्याम बाजार गयें',
@@ -113,19 +143,31 @@ else if (selection.value === "hindi") {
         ];
     let hindiArray = [firstHindiSentence,secondHindiSentence,thirdHindiSentence,fourthHindiSentence,
         fifthHindiSentence,sixthHindiSentence,seventhHindiSentence];
-    let hindiRandom = hindiArray[Math.floor(Math.random() * hindiArray.length)]
     document.getElementById("for1").innerHTML = "(select the buttons in proper order)"
     document.getElementById("for2").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
-    var randomizeWords = hindiRandom[Math.floor(Math.random())]
-    document.getElementById("forval").innerHTML = randomizeWords.split(' ').sort(() => Math.floor(Math.random() * Math.floor(3)) - 1).join(' ')
-    var words = $("p").first().text().split(/\s+/);
-    var text = words.join("</button> <button>");
-    $("p").first().html("<button>" + text + "</button>");
-    $("button").css({"font-size":"20px","padding":"8px","margin-right":"6px"});
-} else {
+    var randomizeWords = Math.floor(Math.random()*hindiArray.length)
+    document.getElementById("for3").innerHTML = ""
+    document.getElementById("for4").innerHTML = ""
+    $("#hideSentence").hide()
+    var changeWords = Math.floor(Math.random() * hindiArray.length);
+    var gettingValue = hindiArray[changeWords][0];
+    var k = randomizeTheValue(gettingValue);
+    var m = "";
+    var n = "";
+    for (i = 0; i <= k.length - 1; i++) {
+        val = k[i];
+        m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='btn1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+        n += m;
+    }
+    document.getElementById("forval").innerHTML = n 
+    }
+else {
     document.getElementById("for1").innerHTML = ""
     document.getElementById("for").innerHTML = ""
     document.getElementById("forval").innerHTML = ""
+    document.getElementById("for3").innerHTML = ""
+    document.getElementById("for4").innerHTML = ""
+    $("#hideSentence").hide()
     alert("Please choose a language")
     }
 }

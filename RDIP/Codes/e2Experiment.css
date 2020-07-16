@@ -1,11 +1,11 @@
 h1 {
     font-family: Geneva ;
-    font-size: 60px;
+    font-size: 50px;
 }
 #for1{
     position: absolute;
     width: 850px;
-    top: 60%;
+    top: 40%;
     align-content: center;
     left: 50%;
     font-size: 18px;
@@ -16,7 +16,7 @@ h1 {
 #for2{
     position: absolute;
     width: 850px;
-    top: 65%;
+    top: 45%;
     left: 50%;
     align-content: center;
     font-size: 18px;
@@ -26,7 +26,7 @@ h1 {
 }
 #forval {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     font-size: 40px;
     font-weight: bold;
@@ -40,7 +40,35 @@ h1 {
     width: 240px;
     font-size: 18px;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#for3{
+    position: absolute;
+    width: 850px;
+    top: 68%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: darkblue;
+    font-family: Geneva;
+}
+#for4{
+    position: absolute;
+    width: 850px;
+    top: 73%;
+    left: 64%;
+    font-family: Geneva;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+}
+#hideSentence{
+    position: absolute;
+    font-size:18px ;
+    padding:6px ;
+    margin-right:4px ;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
