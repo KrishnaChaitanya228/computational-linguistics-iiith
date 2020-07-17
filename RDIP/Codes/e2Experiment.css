@@ -63,6 +63,16 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 22px;
 }
+#for5{
+    position: absolute;
+    width: 850px;
+    top: 100%;
+    left: 76%;
+    font-style: bold;
+    font-family: Geneva;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
 #hideSentence{
     position: absolute;
     font-size:18px ;
