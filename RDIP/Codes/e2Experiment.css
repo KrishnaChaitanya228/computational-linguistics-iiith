@@ -1,6 +1,29 @@
+body{
+    background-color: aqua;
+}
 h1 {
     font-family: Geneva ;
     font-size: 50px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px grey;
+}
+.button:hover {background-color: #3e8e41]}
+.button:active {
+  background-color: grey;
+  box-shadow: black;
+  transform: translateY(3px);
 }
 #for1{
     position: absolute;
@@ -44,6 +67,8 @@ h1 {
     position: absolute;
     top: 30%;
     left: 50%;
+    font-weight: bold;
+    font-family: Geneva;
     transform: translate(-50%, -50%);
 }
 #for3{
@@ -71,7 +96,7 @@ h1 {
     position: absolute;
     width: 850px;
     top: 110%;
-    left: 73%;
+    left: 74%;
     font-style: bold;
     font-family: Geneva;
     transform: translate(-50%, -50%);
@@ -90,12 +115,11 @@ h1 {
 #for7{
     position: absolute;
     width: 850px;
-    top: 150%;
+    top: 160%;
     left: 68%;
     align-content: center;
     font-style: bold;
-    color: orange;
-    font-family: Geneva;
+    color: black;
     transform: translate(-50%, -50%);
     font-size: 30px;
 }
@@ -106,6 +130,8 @@ h1 {
     margin-right:4px ;
     top: 85%;
     left: 50%;
+    font-weight: bold;
+    font-family: Geneva;
     transform: translate(-50%, -50%);
 }
 #hideSentence1{
@@ -115,6 +141,8 @@ h1 {
     margin-right:4px ;
     top: 95%;
     left: 50%;
+    font-weight: bold;
+    font-family: Geneva;
     transform: translate(-50%, -50%);
 }
 #hideSentence2{
@@ -124,5 +152,11 @@ h1 {
     margin-right:4px ;
     top: 300%;
     left: 14%;
+    font-weight: bold;
+    font-family: Geneva;
     transform: translate(-50%, -50%);
+}
+.font{
+    font-weight: bold;
+    font-family: Geneva;
 }

@@ -133,8 +133,8 @@ let firstEnglishSentence = ['John ate an apple before afternoon',
 run = function () {
     if (selection.value === "english") {
 
-        document.getElementById("for1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
-        document.getElementById("for2").innerHTML = "(select the buttons in proper order)"
+        document.getElementById("for1").innerHTML = "<div class='font'>Form a sentence (Declarative or Interrogative or any other type) from the given words</div>"
+        document.getElementById("for2").innerHTML = "<div class='font'>(select the buttons in proper order)</div>"
         changeWords = Math.floor(Math.random()*englishArray.length)
         document.getElementById("for3").innerHTML = ""
         document.getElementById("for4").innerHTML = ""
@@ -152,7 +152,7 @@ run = function () {
         let n = "";
         for (i = 0; i <= k.length - 1; i++) {
             val = k[i];
-            m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+            m = "  <button class='font' style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
             n += m;
             updateValue++;
         }
@@ -160,8 +160,8 @@ run = function () {
         }
     else if (selection.value === "hindi") {
     
-        document.getElementById("for2").innerHTML = "(select the buttons in proper order)"
-        document.getElementById("for1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+        document.getElementById("for1").innerHTML = "<div class='font'>Form a sentence (Declarative or Interrogative or any other type) from the given words</div>"
+        document.getElementById("for2").innerHTML = "<div class='font'>(select the buttons in proper order)</div>"
         changeWords = Math.floor(Math.random()*hindiArray.length)
         document.getElementById("for3").innerHTML = ""
         document.getElementById("for4").innerHTML = ""
@@ -179,7 +179,7 @@ run = function () {
         let n= "";
         for (i = 0; i <= k.length - 1; i++) {
             val = k[i];
-            m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
+            m = "  <button class='font' style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
             n += m;
             updateValue++;
         }
@@ -300,14 +300,14 @@ function checkCorrectness(){
         let temporary = answerKeyValue[i]
         let localValue = temporary.localeCompare(storedValue)
         if(localValue === 0){
-            document.getElementById("for5").innerHTML = "Right answer!!!"
+            document.getElementById("for5").innerHTML = "<div class='font'>Right answer!!!</div>"
             document.getElementById("for5").style.color = "green"
-            return  document.getElementById("for5").innerHTML = "Right answer!!!"
+            return  document.getElementById("for5").innerHTML = "<div class='font'>Right answer!!!</div>"
             }
-            document.getElementById("for5").innerHTML = "Wrong answer!!!"
+            document.getElementById("for5").innerHTML = "<div class='font'>Wrong answer!!!</div>"
             document.getElementById("for5").style.color = "red"
         }
-        document.getElementById("for6").innerHTML = "<button id='hideSentence2' onclick='getAnswers();'>Get Correct Sentence</button>"
+        document.getElementById("for6").innerHTML = "<button id='hideSentence2' onclick='getAnswers();' class='button'>Get Correct Sentence</button>"
  }
 let allAns,getAns;
  function getAnswers(){
@@ -316,14 +316,14 @@ let allAns,getAns;
     document.getElementById("for7").innerHTML = ""
     if(selection.value=='hindi'){
         allAns = hindiArray[changeWords].length-1;
-        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()'>Hide the Correct Sentence</button>"
+        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()' class='button'>Hide the Correct Sentence</button>"
         for(i=0;i<=allAns;i++){
             getAns = getAns + hindiArray[changeWords][i]+"<br/>"
         }
         document.getElementById("for7").innerHTML = getAns;
     }else if (selection.value=='english'){
         allAns = englishArray[changeWords].length-1;
-        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()'>Hide the Correct Sentence</button>"
+        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()' class='button'>Hide the Correct Sentence</button>"
         for(i=0;i<=allAns;i++){
             getAns = getAns + englishArray[changeWords][i]+"<br/>"
         }
@@ -331,12 +331,13 @@ let allAns,getAns;
     }
 }
 hide = function(){
-    document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='swapButton()'>Get Answers</button>"
+    document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='swapButton()' class='button'>Get Answers</button>"
     document.getElementById("for7").innerHTML = "";
 }
 swapButton = function(){
     while(document.getElementById("for7").innerHTML ==""){
-        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()'>Hide the Correct Sentence</button>"
+        document.getElementById('for6').innerHTML = "<button id='hideSentence2' onclick='hide()' class='button'>Hide the Correct Sentence</button>"
         document.getElementById("for7").innerHTML = getAns;
     }
 }
+

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>RDIP Project</title>
     <link rel="stylesheet" href="e2Experiment.css">
     <script src="../Libraries/jquery-3.5.1.js"></script>
 </head>
@@ -10,6 +10,7 @@
 <body>
     <center>
         <h1>Experiment</h1>
+        <hr>
         <hr>
         <select id="language" onchange="run();">
             <option value="default">---Select Language---</option>
@@ -25,9 +26,9 @@
     <span id = "for5"></span>
     <span id = "for6"></span>
     <span id = "for7"></span>
-    <button id="hideSentence" onclick="reform();">Re-form the sentence</button>
-    <button id="hideSentence1" onclick="checkCorrectness();">Check the correctness of this sentence</button>
-    <button id="hideSentence2">Get Correct Sentence</button>
+    <button id="hideSentence" onclick="reform();" class="button">Re-form the sentence</button>
+    <button id="hideSentence1" onclick="checkCorrectness();" class="button">Check the correctness of this sentence</button>
+    <button id="hideSentence2" class="button">Get Correct Sentence</button>
     <script src="e2Experiment.js"></script>
 </body>
 </html>
