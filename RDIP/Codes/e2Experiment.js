@@ -1,5 +1,7 @@
 let selection = document.getElementById("language");
 $("#hideSentence").hide()
+$("#hideSentence1").hide()
+let startValue, updateValue;
 let k;
 let valueToBeDisplay = "";
 function buttonDisplay(id, value) {
@@ -8,6 +10,10 @@ function buttonDisplay(id, value) {
     document.getElementById("for4").innerHTML = valueToBeDisplay;
     $("#hideSentence").show()
     document.getElementById(id).style.display = "none";
+    startValue++; 
+    if(startValue == updateValue){
+        $("#hideSentence1").show()
+    }
 }
 function randomizeTheValue(data) {
     var mix = data.split(" ");
@@ -76,13 +82,17 @@ run = function () {
         document.getElementById("for4").innerHTML = ""
         valueToBeDisplay=""
         $("#hideSentence").hide()
+        $("#hideSentence1").hide()
         let gettingValue = englishArray[changeWords][0];
         var k = randomizeTheValue(gettingValue);
+        startValue = 0;
+        updateValue = 0;
         let n = "";
         for (i = 0; i <= k.length - 1; i++) {
             val = k[i];
             m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
             n += m;
+            updateValue++;
         }
         document.getElementById("forval").innerHTML = n
         }
@@ -151,11 +161,14 @@ run = function () {
         let changeWords = Math.floor(Math.random()*hindiArray.length);
         let gettingValue = hindiArray[changeWords][0];
         k = randomizeTheValue(gettingValue);
+        startValue = 0;
+        updateValue = 0;
         let n= "";
         for (i = 0; i <= k.length - 1; i++) {
             val = k[i];
             m = "  <button style= 'font-size:15px ; padding:4px ; margin-right:4px ' id='button1" + i + "' onclick='buttonDisplay(this.id,this.value)' value='" + val + "'>" + val + "</button>  ";
             n += m;
+            updateValue++;
         }
         document.getElementById("forval").innerHTML = n 
         }
@@ -166,6 +179,7 @@ run = function () {
         document.getElementById("for3").innerHTML = ""
         document.getElementById("for4").innerHTML = ""
         $("#hideSentence").hide()
+        $("#hideSentence1").hide()
         alert("Please choose a language")
         }
 }
@@ -176,5 +190,6 @@ function reset() {
     for (let i = 0; i <=10; i++) {
         document.getElementById('button1'+i).style.display = "";
     }
-    $("#hideSentence").hide()
+    startValue=0;
+    $("#hideSentence1").hide()
 }

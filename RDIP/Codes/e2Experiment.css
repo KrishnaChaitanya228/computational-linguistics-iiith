@@ -71,4 +71,13 @@ h1 {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-} 
+}
+#hideSentence1{
+    position: absolute;
+    font-size:18px ;
+    padding:6px ;
+    margin-right:4px ;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
