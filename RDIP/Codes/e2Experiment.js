@@ -7,7 +7,7 @@ let k;
 let changeWords;
 let valueToBeDisplay = "";
 function buttonDisplay(id, value) {
-    document.getElementById("for3").innerHTML = "Formed Sentence (after selecting words):";
+    document.getElementById("for3").innerHTML = "Formed Sentence <i>(after selecting words)</i>:";
     valueToBeDisplay += value + " ";
     document.getElementById("for4").innerHTML = valueToBeDisplay;
     $("#hideSentence").show()
@@ -132,9 +132,9 @@ let firstEnglishSentence = ['John ate an apple before afternoon',
             fifthEnglishSentence,sixthEnglishSentence,seventhEnglishSentence,eightEnglishSentence,ninethEnglishSentence,tenthEnglishSentence];
 run = function () {
     if (selection.value === "english") {
-        
-        document.getElementById("for2").innerHTML = "(Select the buttons in proper order)"
+
         document.getElementById("for1").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words"
+        document.getElementById("for2").innerHTML = "(select the buttons in proper order)"
         changeWords = Math.floor(Math.random()*englishArray.length)
         document.getElementById("for3").innerHTML = ""
         document.getElementById("for4").innerHTML = ""
