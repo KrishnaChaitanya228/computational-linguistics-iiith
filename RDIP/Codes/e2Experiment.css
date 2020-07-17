@@ -67,7 +67,7 @@ h1 {
     position: absolute;
     width: 850px;
     top: 100%;
-    left: 76%;
+    left: 73%;
     font-style: bold;
     font-family: Geneva;
     transform: translate(-50%, -50%);
@@ -88,6 +88,15 @@ h1 {
     padding:6px ;
     margin-right:4px ;
     top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#hideSentence2{
+    position: absolute;
+    font-size:18px ;
+    padding:6px ;
+    margin-right:4px ;
+    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

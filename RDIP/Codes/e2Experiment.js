@@ -1,6 +1,7 @@
 let selection = document.getElementById("language");
 $("#hideSentence").hide()
 $("#hideSentence1").hide()
+$("#hideSentence2").hide()
 let startValue, updateValue;
 let k;
 let valueToBeDisplay = "";
@@ -84,6 +85,7 @@ run = function () {
         valueToBeDisplay=""
         $("#hideSentence").hide()
         $("#hideSentence1").hide()
+        $("#hideSentence2").hide()
         let gettingValue = englishArray[changeWords][0];
         var k = randomizeTheValue(gettingValue);
         startValue = 0;
@@ -161,6 +163,7 @@ run = function () {
         document.getElementById("for5").innerHTML = ""
         $("#hideSentence").hide()
         $("#hideSentence1").hide()
+        $("#hideSentence2").hide()
         let changeWords = Math.floor(Math.random()*hindiArray.length);
         let gettingValue = hindiArray[changeWords][0];
         k = randomizeTheValue(gettingValue);
@@ -184,6 +187,7 @@ run = function () {
         document.getElementById("for5").innerHTML = ""
         $("#hideSentence").hide()
         $("#hideSentence1").hide()
+        $("#hideSentence2").hide()
         alert("Please choose a language")
         }
 }
@@ -291,4 +295,5 @@ function checkCorrectness(){
             document.getElementById("for5").innerHTML = "Wrong answer!!!"
             document.getElementById("for5").style.color = "red"
         }
- } 
+    $("#hideSentence2").show()
+} 
